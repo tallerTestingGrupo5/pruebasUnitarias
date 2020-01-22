@@ -70,7 +70,34 @@ public class employeeTest {
 	   }
 	 
 	 
+	 @Test
+	   public void bonusAnualEURTipoManager() {
+	      System.out.println("Calculando bonus siendo el empleado de tipo Manager con EUR...");
+	      Employee E = new Employee((float) 700.0, "EUR" ,0.5f, EmployeeType.Manager);
+	      assertTrue(E.CalculateYearBonus()==1051f);
+	   }
 	 
+	  
+	 @Test
+	   public void bonusAnualUSDTipoWorker() {
+	      System.out.println("Calculando bonus siendo el empleado de tipo Worker con USD...");
+	      Employee E = new Employee((float) 500.0, "USD" ,0.5f, EmployeeType.Worker);
+	      assertTrue(E.CalculateYearBonus()==386.0f);
+	   }
+	 
+	 @Test
+	   public void bonusAnualUSDTipoSupervisor() {
+	      System.out.println("Calculando bonus siendo el empleado de tipo Supervisor con USD...");
+	      Employee E = new Employee((float) 600.0, "USD" ,0.5f, EmployeeType.Supervisor);
+	      assertTrue(E.CalculateYearBonus()==793f);
+	   }
+	 
+	 @Test
+	   public void bonusAnualUSDTipoManager() {
+	      System.out.println("Calculando bonus siendo el empleado de tipo Manager con USD...");
+	      Employee E = new Employee((float) 700.0, "USD" ,0.5f, EmployeeType.Manager);
+	      assertTrue(E.CalculateYearBonus()==1086f);
+	   }
 
 	 
 }
